@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Hospital management system</title>
+<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="{{url_for('home')}}">Hospital management system</a></h1>
+			    </div>
+               		  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Home" href={{url_for('home')}}>Home</a></li>
+							<li><a href="{{url_for('doclogin')}}" class="scroll" data-hover="Doctor login">Doctor login</a></li>
+							<li><a href="{{url_for('patlogin')}}" class="scroll" data-hover="Patient login">Patient login</a></li>
+						</ul>
+						</script>
+
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<table>
+<form method='POST'>
+{% if k==0 %}
+<tr><td>Enter new First name</td><td><input type="text" name="Fname" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if (k==1)%}
+<tr><td>Enter new Last name</td><td><input type="text" name="Lname" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if k==2 %}
+<tr><td>Enter new sex</td><td><input type="radio" name="sex" value="male" aria-describedby="basic-addon3" checked>male<br>
+			 	<input type="radio" name="sex" value="female" aria-describedy="basic-addon3">female<br>	
+				<input type="radio" name="sex" value="other" aria-describedy="basic-addon3">other</td></tr>
+{% endif %}
+{% if k==3 %}
+<tr><td>Enter new age</td><td><input type="text" name="age" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if k==4 %}
+<tr><td>Enter new E-mail</td><td><input type="text" name="E-mail" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if k==5 %}
+<tr><td>Enter new phone number</td><td><input type="number" name="phno" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if k==6 %}
+<tr><td>Enter new disease</td><td><input type="text" name="dis" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if k==7 %}
+<tr><td>Enter new room number</td><td><input type="text" name="disease" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if k==8 %}
+<tr><td>Enter new consulting doctor id</td><td><input type="text" name="condoc" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+{% if k==9 %}
+<tr><td>Enter new Password</td><td><input type="text" name="passw" aria-describedby="basic-addon3"></td></tr>
+{% endif %}
+<tr><td><input type="submit" value=update></td></tr>
+</form>
+</table>
+</body>

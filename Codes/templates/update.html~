@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Hospital management system</title>
+<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="{{url_for('home')}}">Hospital management system</a></h1>
+			    </div>
+               		  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Home" href={{url_for('home')}}>Home</a></li>
+							<li><a class="scroll" data-hover="About" href="#about">About</a></li>
+							<li><a href="{{url_for('doclogin')}}" class="scroll" data-hover="Doctor login">Doctor login</a></li>
+							<li><a href="{{url_for('patlogin')}}" class="scroll" data-hover="Patient login">Patient login</a></li>
+							<li><a class="scroll" data-hover="Contact" href="#contact">Contact</a></li>
+						</ul>
+						</script>
+
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+{% if error %}
+<h2><strong>Error</strong>{{error}}</h2>
+{% endif %}
+<table><form action="" method="POST">
+<tr><td>Enter your username</td><td><input type="number" name="pid" aria-describedby="basic-addon3"></td></tr>
+<tr><td>Enter yout password</td><td><input type="password" name="passwd" aria-describedby="basic-addon3"></td></tr>
+<tr><td>Select the attribute you want to update</td><td><input type="radio" name="attr" value="Fname" checked>First name<br>
+  				<input type="radio" name="attr" value="Lname"> last name<br>
+  				<input type="radio" name="attr" value="sex"> sex<br>
+				<input type="radio" name="attr" value="age"> age<br>
+				<input type="radio" name="attr" value="Email">E-mail<br>
+				<input type="radio" name="attr" value="Phone number">Number<br>
+				<input type="radio" name="attr" value="Disease">disease<br>
+				<input type="radio" name="attr" value="Room_no">room number<br>
+				<input type="radio" name="attr" value="consdoc">Consulting doctor<br>
+				<input type="radio" name="attr" value="passw">Password</td></tr>
+<tr><td><input type="submit" value="Next"><td></tr>
+</form>
+<tr><p>{{k}}</p></tr>
+</table>
+
+<div class="banner">
+	<div class="container">
+		<div class="banner-main">
+			 <h3>We Work For Your Health</h3>
+			 <p>Hospital management project done by<br>Siddharth tyagi-15BEC0483<br>Aditya joshi 15BCB0078</p>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</html>
+</body>
+

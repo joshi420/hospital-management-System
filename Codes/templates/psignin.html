@@ -1,0 +1,95 @@
+<<!DOCTYPE html>
+<html>
+<head>
+   <title>Hospital management system</title>
+<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="{{url_for('home')}}">Hospital management system</a></h1>
+			    </div>
+               		  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Home" href="{{url_for('home')}}">Home</a></li>
+						</ul>
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+<div style="color:red">
+<h1>Patient Registration</h1>
+</div>
+<div align="cente">
+{% if error %}
+<p><strong>Error:</strong> {{ error}}</p>
+{% endif %}
+	<table>
+		<form action="/home/signup/successful" method="POST">
+		<tr><td>Enter your ID</td>
+			<td><input type="number" name="pid" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter the First Name</td>
+			<td><input type="p" name="pFirstname" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter the Last Name</td>
+			<td><input type="text" name="pLastname" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter your Sex</td>
+			<td><input type="radio" name="sex" value="male" checked> Male<br>
+  				<input type="radio" name="sex" value="female"> Female<br>
+  				<input type="radio" name="sex" value="other"> Other</td>
+		</tr>
+		<tr><td>Enter your Age</td>
+			<td><input type="number" name="age" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter your E-mail id</td>
+			<td><input type="text" name="email" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter your phone number</td>
+			<td><input type="number" name="number" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter Disease</td>
+			<td><input type="text" name="disease" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter your Room number</td>
+			<td><input type="number" name="room_number" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter date of admission in formart YYYY-MM-DD</td>
+			<td><input type="date" name="date_add" aria-describedby="basic-addon3"></td>
+		</tr>
+		</tr>
+		<tr><td>Enter consulting doctorid</td>
+			<td><input type="number" name="docCons" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter Bill number</td>
+			<td><input type="number" name="billnum" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter Consultation_Charge</td>
+			<td><input type="number" name="Consultation_Charge" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter Medication_Charge</td>
+			<td><input type="number" name="Medication_Charge" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter Room_Charge</td>
+			<td><input type="number" name="Room_Charge" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td>Enter date of bill genration in formart YYYY-MM-DD</td>
+			<td><input type="date" name="billdate" aria-describedby="basic-addon3"></td>
+		</tr>
+		<tr><td><input type="submit" value="Sign-up" aria-describedby="basic-addon3"></td></tr>
+		</form>
+	</table>
+</div>
+</body>

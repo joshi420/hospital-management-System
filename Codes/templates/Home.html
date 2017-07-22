@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Hospital management system home</title>
+<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<!--header start here-->
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="{{url_for('home')}}">Hospital management system</a></h1>
+			    </div>
+               		  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Home" href={{url_for('home')}}>Home</a></li>
+							<li><a href="{{url_for('doclogin')}}" class="scroll" data-hover="Doctor login">Doctor login</a></li>
+							<li><a href="{{url_for('patlogin')}}" class="scroll" data-hover="Patient login">Patient login</a></li>
+						<li><a href="{{url_for('appointment')}}" class="scroll" data-hover="Fix appointment">Fix appointment</a></li>
+						</ul>
+
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+<div class="banner">
+	<div class="container">
+		<div class="banner-main">
+			 <h3>We Work For Your Health</h3>
+			 <p>Hospital management project done by<br>Siddharth tyagi-15BEC0483<br>Aditya joshi 15BCB0078</p>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>

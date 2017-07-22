@@ -1,0 +1,62 @@
+<<!DOCTYPE html>
+<html>
+<head>
+   <title>Hospital management system</title>
+<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="{{url_for('home')}}">Hospital management system</a></h1>
+			    </div>
+               		  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Home" href={{url_for('home')}}>Home</a></li>
+							<li><a href="{{url_for('doclogin')}}" class="scroll" data-hover="Doctor login">Doctor login</a></li>
+							<li><a href="{{url_for('patlogin')}}" class="scroll" data-hover="Patient login">Patient login</a></li>						</ul>
+
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="container">
+        <div class="container">
+            <div class>
+                <form action="" method="POST">
+                    {% if error %}
+                        <p class=error><strong>Error:</strong> {{ error }}
+                    {% endif %}
+                     <table><tr><td><span>Your Username</span></td>
+                     <td><input type="text" name="username" id="user" aria-describedby="basic-addon3"></td></tr>
+                   <tr><td>
+                        <span>Your Password</span></td>
+                       <td> <input type="password" name="password" aria-describedby="basic-addon3"></td></tr>
+                        <tr><td><input type="Submit" value="Login" </td>
+			<td><a href="{{url_for('psigned')}}"><button type="button">sign up</button></a></td>
+			<td><a href="{{url_for('patientUp')}}"><button type="button">Update</button></a></tr>
+		    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="banner">
+	<div class="container">
+		<div class="banner-main">
+			 <h3>We Work For Your Health</h3>
+			 <p>Hospital management project done by<br>Siddharth tyagi-15BEC0483<br>Aditya joshi 15BCB0078</p>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</body>
+</html>

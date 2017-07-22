@@ -1,0 +1,37 @@
+<<!DOCTYPE html>
+<html>
+<head>
+   <title>Hospital management system</title>
+<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="{{url_for('home')}}">Hospital management system</a></h1>
+			    </div>
+               		  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Home" href="{{url_for('home')}}">Home</a></li>
+						</ul>
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+{%if done==0%}
+<h1>Registration successful</h1>
+{%endif%}
+{%if done==1%}
+<h1>updated successfully</h1>
+{%endif%}
+</body>

@@ -1,0 +1,53 @@
+<<!DOCTYPE html>
+<html>
+<head>
+<title>Hospital management system</title>
+<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+
+<!--header start here-->
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="{{url_for('home')}}">Hospital management system</a></h1>
+			    </div>
+               		  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Log out" href="{{url_for('logout')}}">Log out</a></li>
+						</ul>
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="container">
+        <div class="container">
+            <div class>
+		<h1>{{firstname+"  "+lastname}}</h1><br><br><br>
+                <table border="1"><tr><td><span>Doctor ID</span></td><td><span>First name</span></td><td><span>Last name</span></td><td><span>Sex</span></td><td><span>Age</span></td><td><span>E-mail</span></td><td><span>Phone number</span></td><td><span>Department</span></td><td><span>Shift</span></td></tr>
+<tr><td><span>{{username}}</span></td><td><span>{{firstname}}</span></td><td><span>{{lastname}}</span></td><td><span>{{sex}}</span></td><td><span>{{age}}</span></td><td><span>{{Email}}</span></td><td><span>{{phno}}</span></td><td><span>{{department}}</span></td><td><span>{{shift}}</span></td></tr></table>
+                <br>
+		<br>
+		<br>
+		<h1>patients</h1><br><br>
+		<div style="align:center">
+		<table border="1"><tr><td>Patient ID</td><td>Pateint Name  </td></tr>
+		{% for row in data%}
+		<tr>
+		{% for col in row%}
+			<td>{{col}}</td>
+		{%endfor%}
+		</tr>
+		{%endfor%}
+		</table></div>
+            </div>
+        </div>
+</div>
