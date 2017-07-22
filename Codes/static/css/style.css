@@ -1,0 +1,228 @@
+h4, h5, h6,
+h1, h2, h3 {margin: 0;}
+ul, ol {margin: 0;}
+p {margin: 0;}
+html, body{
+  font-family: 'Hind', sans-serif;
+   font-size: 100%;
+   background:#fff; 
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+@font-face {
+    font-family: 'Play-Regular';
+    src:url(../fonts/Play-Regular.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Hind-Regular';
+    src:url(../fonts/Hind-Regular.ttf) format('truetype');
+}
+.header {
+    background:#A73C46;
+    padding: 1em 0em;
+}
+span.menu {
+    display: none;
+}
+.logo {
+    float: left;
+    width: 40%;
+}
+.header-left {
+    float: left;
+    width: 40%;
+}
+.logo h1 {
+    font-size: 3em;
+    font-family: 'Cambo', serif;
+}
+.logo h1 a{
+	color:#fff;
+	text-decoration:none;
+}
+.social-icons {
+    float: right;
+    width: 40%;
+    padding-top: 0.75em;
+}
+.top-navg {
+    float: right;
+    width: 60%;
+    text-align: right;
+    padding-top: 1em;
+}
+.social-icons ul {
+    padding: 0px;
+    list-style: none;
+}
+.social-icons ul li {
+    display: inline-block;
+}
+.top-navg ul {
+    padding: 0em 0em 0em 0em;
+    list-style: none;
+}
+.top-navg ul li {
+    display: inline-block;
+}
+.top-navg ul li a {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0em 0.7em;
+}
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 0em 1em 0em 0em;
+	outline: none;
+	color: #000;
+	text-decoration: none;
+	letter-spacing: 1px;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+	text-decoration:none;
+}
+
+.cl-effect-16 a {
+	color: #000;
+}
+
+.cl-effect-16 a::before {
+	color:#84754e;
+	text-decoration:none;
+	content: attr(data-hover);
+	position: absolute;
+	opacity: 0;
+	-webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+	-moz-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+	transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-16 a:hover::before,
+.cl-effect-16 a:focus::before {
+	-webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+	-moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+	transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+	opacity: 1;
+}
+/*--*/
+.social-icons ul li a span {
+    background: url(../images/social-icon.png)no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+     margin: 0em 0.7em 0em 0em;
+}
+.social-icons ul li a span.fa {
+    background-position: 6px 0px;
+}
+.social-icons ul li a span.tw {
+    background-position: -21px 0px;
+}
+.social-icons ul li a span.ga {
+    background-position: -48px 0px;
+}
+.social-icons ul li a span.fa:hover{
+    background-position: 6px 0px;
+    opacity: 0.4;
+}
+.social-icons ul li a span.tw:hover{
+    background-position: -21px 0px;
+    opacity: 0.4;
+}
+.social-icons ul li a span.ga:hover{
+    background-position: -48px 0px;
+    opacity: 0.4;
+}
+.banner {
+    background: url(../images/banner.jpg)no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 750px;
+}
+.banner-main {
+    padding: 2em 1em;
+    text-align: center;
+    background:#84754e;
+    width: 60%;
+    margin: 38.7em auto 0em;
+}
+.banner-main h3 {
+    font-size: 2.5em;
+    color: #fff;
+        margin: 0em 0em 0.1em 0em;
+    font-family: 'Cambo', serif;
+}
+.banner-main p {
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.8em;
+    width: 63%;
+    margin: 0 auto;
+}
+.about-top {
+    text-align: center;
+    padding: 0em 0em 4em 0em;
+}
+.about {
+    padding: 5em 0em 5em 0em;
+}
+.about-top h2 {
+    font-size: 2.5em;
+    color: #A73C46;
+    margin-bottom: 0.15em;
+    font-family: 'Cambo', serif;
+}
+.about-top p {
+    font-size: 1em;
+    color: #797979;
+    line-height: 1.8em;
+    width: 50%;
+    margin: 0 auto;
+}
+.grid-details {
+    background:#84754e;
+    padding: 1em 1em;
+}
+.grid-details h3 {
+    font-size: 1.2em;
+    color: #fff;
+    padding: 0em 0em 0.3em 0em;
+    font-family: 'Cambo', serif;
+}
+.grid-details p {
+    font-size: 1em;
+    color:#D0D0D0;
+    line-height: 1.7em;
+}
+.about-grid {
+    text-align: center;
+}
+.team-top {
+    text-align: center;
+    padding: 0em 0em 3em 0em;
+}
+.team-top h3 {
+    font-size: 2.5em;
+    color: #A73C46;
+    font-family: 'Cambo', serif;
+}
