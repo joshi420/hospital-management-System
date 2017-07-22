@@ -1,0 +1,72 @@
+ create table patient(
+ Patient_ID integer(5) primary key,
+ First_Name varchar(20) not null,
+ Last_Name varchar(20) not null,
+ Sex varchar(20) not null,
+ Age integer(2) not null,
+ E_mail varchar(20) not null,
+ Phone_number varchar(20) not null,
+ Disease varchar(20) not null);
+
+create table Doctor(
+Doctor_ID int(5) primary key,
+First_Name varchar(20) not null,
+Last_Name varchar(20) not null,
+Sex varchar(20) not null,
+Age int(2) not null,
+E_mail varchar(20) not null,
+Phone_Number varchar(20) not null,
+Department varchar(20) not null,
+Shift varchar(20) not null);
+
+create table room(
+Room_Number int(3) primary key,
+Room_Type varchar(20) not null,
+Room_Status varchar(20) not null,
+number_Of_Beds varchar(20) not null);
+
+create table bill(
+Bill_Number int(5) primary key,
+Patient_ID int(5),
+foreign key(Patient_ID)
+references patient(Patient_ID),
+Date_Of_Generation date not null, 
+Consultation_Charge int not null,
+Room_Charge int not null,
+Medication_Charge int not null,
+Total_Bill_Amount int not null);
+
+create table In_patient(
+Patient_ID int(5),
+foreign key(Patient_ID)
+ references Patient(Patient_ID),
+Date_Of_Admission date not null,
+Room_Number int(3), 
+foreign key (Room_Number)
+references Room(Room_Number));
+
+create table Out_Patient(
+Patient_ID int(5),
+Date_Of_Admission date not null,
+Date_Of_Discharge date not null,
+Date_Of_Next_Appointment date not null,
+foreign key (Patient_ID)
+references Patient(Patient_ID));
+
+create table Consult(
+Patient_ID int(5), 
+Doctor_ID int(5), 
+foreign key (Patient_ID)
+ references Patient(Patient_ID),
+foreign key (Doctor_ID)
+references Doctor(Doctor_ID));
+
+create table allocation(
+Patient_ID int(5),
+foreign key (Patient_ID)
+ references Patient(Patient_ID),
+Room_Number int(3),
+ foreign key (Room_Number)
+ references Room(Room_Number));
+
+
